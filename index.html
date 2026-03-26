@@ -8,8 +8,9 @@
 <body style="margin:0; display:flex; justify-content:center; align-items:center; min-height:100vh; background:#ffe4e1; font-family:sans-serif;">
 
   <div style="text-align:center;">
-    <h1>🎉 Hyvää syntymäpäivää Iskä! 🎂</h1>
+    <h1>🎉 Hyvää syntymäpäivää! 🎂</h1>
     <p>Toivottavasti päiväsi on mahtava!</p>
+
     <button onclick="heitäKonfetti()" 
       style="margin-top:20px; padding:12px 24px; font-size:16px; border:none; border-radius:12px; background:#ff69b4; color:white; cursor:pointer;">
       🎉 Lisää konfettia!
@@ -19,13 +20,17 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
-    // Käytetään varmemmin toimivaa tapaa
-    setTimeout(() => {
+    function heitäKonfetti() {
       confetti({
         particleCount: 200,
         spread: 120,
         origin: { y: 0.6 }
       });
+    }
+
+    // automaattinen konfetti kun sivu avataan
+    setTimeout(() => {
+      heitäKonfetti();
     }, 300);
   </script>
 
