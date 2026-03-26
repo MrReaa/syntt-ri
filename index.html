@@ -3,8 +3,23 @@
 <head>
   <title>Hyvää syntymäpäivää!</title>
 </head>
-<body style="text-align:center; font-family:sans-serif; background:#ffe4e1;">
-  <h1>🎉 Hyvää syntymäpäivää! 🎂</h1>
-  <p>Toivottavasti päiväsi on mahtava!</p>
+<body style="margin:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#ffe4e1; font-family:sans-serif;">
+
+  <div style="text-align:center;">
+    <h1>🎉 Hyvää syntymäpäivää! 🎂</h1>
+    <p>Toivottavasti päiväsi on mahtava!</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = function() {
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+
 </body>
 </html>
