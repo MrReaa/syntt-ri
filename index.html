@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>Hyvää syntymäpäivää!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="margin:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#ffe4e1; font-family:sans-serif;">
+
+<body style="margin:0; display:flex; justify-content:center; align-items:center; min-height:100vh; background:#ffe4e1; font-family:sans-serif;">
 
   <div style="text-align:center;">
     <h1>🎉 Hyvää syntymäpäivää! 🎂</h1>
@@ -11,14 +13,16 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <script>
-    window.onload = function() {
+    // Käytetään varmemmin toimivaa tapaa
+    setTimeout(() => {
       confetti({
-        particleCount: 150,
-        spread: 100,
+        particleCount: 200,
+        spread: 120,
         origin: { y: 0.6 }
       });
-    };
+    }, 300);
   </script>
 
 </body>
